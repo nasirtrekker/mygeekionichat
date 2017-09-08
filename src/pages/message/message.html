@@ -1,0 +1,16 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{selectedProfile?.firstName}}  {{selectedProfile?.lastName}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <app-chat-message *ngFor="let message of messageList | async" [chatMessage]="message" [userId]="userId"></app-chat-message>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <app-send-message-box (sendMessage)="sendMessage($event)"></app-send-message-box>
+  </ion-toolbar>
+</ion-footer>

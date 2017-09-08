@@ -1,0 +1,20 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Inbox</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="navigateToSearchUserPage()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <app-last-message-list></app-last-message-list>
+  <app-online-users></app-online-users>
+
+</ion-content>
